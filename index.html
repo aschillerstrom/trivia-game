@@ -14,16 +14,23 @@
 
     <!-- holds quiz-->
     <div id="quizContainer" class = "container">
-        <div class = "title">Question</div>
-        <div id = "question" class = "question"></div>
+            <div class = "row">
+            <div class = "col-md-6">
+            <div class = "timer">Time Remaining</div>
+            <div class = "questionsRemaining">Questions Left</div>
+            <div id = "question" class = "question"></div>
+            </div>
+            <div class = "col-md-6">
             <label class = "option"><input type =radio name = "answer" value = "a"/><span id = "opta"></span></label>    
             <label class = "option"><input type=radio name = "answer" value = "b"/><span id = "optb"></span></label> 
             <label class = "option"><input type=radio name = "answer" value = "c"/><span id = "optc"></span></label> 
             <label class = "option"><input type=radio name = "answer" value = "d"/><span id = "optd"></span></label> 
-            <button id="nextButton" class="nextButton" onclick="displayNextQuestion();">Submit</button>    <!-- submits quiz answer and advances question-->
-    </div>                                       
+            <button id="nextButton" class="nextButton" onclick="displayNextQuestion();">Submit</button>  
+            </div>  <!-- submits quiz answer and advances question-->
+        </div>      
+    </div>                                 
      <!-- displays results -->
-    <div id="results" class = "containerResults" style = "display: none"></div>  
+    <div id="results" class = "resultsContainer" style = "display: none;"></div>  
     
     
     <!-- js files -->

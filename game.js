@@ -3,12 +3,12 @@ var score = 0;
 
 
 var container = document.getElementById('quizContainer');
-var questionEl = document.getElementById('question');
+var questionDis = document.getElementById('question');
 var resultsContainer = document.getElementById('results');
 
 var optA = document.getElementById("opta");
 var optB = document.getElementById("optb");
-var optC = document.getElementById("optb");
+var optC = document.getElementById("optc");
 var optD = document.getElementById("optd");
 var nextButton = document.getElementById('nextButton');
 
@@ -22,8 +22,7 @@ var questions = [
             optionD: "marcus",
         answer: "a"
     },
-    {   question:  "what is your name?",
-        
+    {   question:  "what is your name?",    
             optionA: "amy",
             optionB: "mary",
             optionC: "sam",
@@ -38,11 +37,12 @@ var totalQuestions = questions.length;
 function displayQuestion(questionsIndex){
     var q = questions[questionsIndex];
     console.log (q);
-    questionEl = (questionsIndex +1) + ") " + q.question;
-    console.log (questionEl);
+    questionDis.textContent = (questionsIndex +1) + ") " + q.question;
+    console.log (questionDis);
     optA.textContent = q.optionA;
     //console.log (optA.textContent);
     optB.textContent = q.optionB;
+    //console.log(optB.textContent);
     optC.textContent = q.optionC;
     optD.textContent = q.optionD;
 
@@ -61,8 +61,9 @@ function displayNextQuestion () {
     }
     if(currentQuestion == totalQuestions){
         container.style.display = "none";
-        resultsContainer.style.diplay = "";
-        resultsContainer.textContent = "Score: " + score;
+        resultsContainer.style.display = "";
+        resultsContainer.textContent = "Score: " + score + "%";
+        console.log("score: "+score);
         return;
     }
 displayQuestion(currentQuestion);
@@ -70,6 +71,6 @@ displayQuestion(currentQuestion);
 displayQuestion(currentQuestion);
 //display results to user
 
-function displayResults(){}
+
 
 

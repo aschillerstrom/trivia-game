@@ -36,6 +36,9 @@ body {
     font-size: 18px;
     color: aliceblue;
     background-color: aquamarine;
+    padding: 25px;
+    margin:10px;
+    text-align: center;
 }
 
 .option:hover {
@@ -54,9 +57,11 @@ body {
     background-color: antiquewhite;
 }
 
-.containerResults {
+.resultsContainer {
     background-color: black;
     color: blue;
     height:  100px;
+    text-align: center;
+    font-size: 25px;
 
 }
