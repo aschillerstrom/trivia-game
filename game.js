@@ -1,3 +1,4 @@
+
 var currentQuestion = 0;
 var score = 0;
 
@@ -12,9 +13,6 @@ var optC = document.getElementById("optc");
 var optD = document.getElementById("optd");
 var nextButton = document.getElementById('nextButton');
 
-var gameImages =[
-
-]
 
 var questions = [
     {   question: "Name a bad job for someone who is accident prone",
@@ -90,17 +88,21 @@ var questions = [
     
     ]
 var totalQuestions = questions.length;
+var seconds = 30;
 
 //start quiz
+
+//for some reason when I added a timer and the entry screen, the questions no longer scroll through to the results.  I removed the timer and what 
+//is "broken" is the entry screen.  However, after deletinga nd adding timers and the entry screen too many times to count.  I am a little stuck.
+//Will regroup and try again after class today - too late for the grade but it will be completed.
 function quizStarts(){
-    
     //start timer
-
-
+    //counter = setInterval(timer, 1000);
     
-    document.getElementById("startGame").style.cssText= "display: none";
+}
     //make the quiz
     function displayQuestion(questionsIndex){
+        document.getElementById("startGame").style.cssText= "display: none";
         document.getElementById("quizContainer").style.cssText= "display: block";
       
         var q = questions[questionsIndex];
@@ -140,5 +142,5 @@ displayQuestion(currentQuestion);
 //display results to user
 
 
-}
+
 

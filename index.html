@@ -15,11 +15,11 @@
 </head>
 <body>
 
-<div id = "startGame" class = "startGame">
+<div id = "startGame" class = "startGame" style = "display:block;">
         <button type="button" class="btn btn-primary btn-lg" onclick="quizStarts()">Click here to play fast money where you will try to select the top answer to 10 questions in 20 seconds</button>
 </div>
 
-<div id="timerContainer">
+<div id="timerContainer" class = "timerContainer">
 
     <div id = "timer" class = "timer"></div>
 
@@ -49,7 +49,7 @@
             <div class = "row">
                 <div class = "col-md-5"></div>
                 <div class = "col-md-3">
-                    <button id="nextButton" class="nextButton" onclick="displayNextQuestion();">Submit</button>  <!-- submits quiz answer and advances question-->  
+                    <button id="nextButton" class="nextButton" onclick="displayNextQuestion()">Submit</button>  <!-- submits quiz answer and advances question-->  
                 </div>
                 <div class = "col-md-4"></div>
             </div>
